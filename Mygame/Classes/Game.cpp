@@ -1,5 +1,3 @@
-#include "cocos2d.h"
-#include "HelloWorldScene.h"
 #include"framework.h"
 
 USING_NS_CC;
@@ -10,6 +8,12 @@ cocos2d::Scene* Game::createScene()
 	auto layer = Game::create();
 	scene->addChild(layer);
 	return scene;
+}
+
+static void problemLoading(const char* filename)
+{
+	printf("Error while loading: %s\n", filename);
+	printf("Depending on how you compiled you might have to add 'Resources/' in front of filenames in HelloWorldScene.cpp\n");
 }
 
 //Initialize
@@ -32,6 +36,19 @@ void Game::update(float dt)
 	float gameTimer = getTimer();
 	gameTimer -=  m_count;
 	auto timer = Label::createWithTTF(to_string(gameTimer), "fonts/Marker Felt.ttf", 24);
+	if (timer == nullptr)
+	{
+		problemLoading("'fonts/Marker Felt.ttf'");
+	}
+	else
+	{
+		// position the label on the center of the screen
+		timer->setPosition(Vec2(origin.x + visibleSize.width / 2,
+			origin.y + visibleSize.height - timer->getContentSize().height));
+
+		// add the label as a child to this layer
+		this->addChild(timer, 1);
+	}
 	this->addChild(timer, 1);
 	if (gameTimer < 1) 
 	{

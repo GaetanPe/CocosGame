@@ -1,4 +1,4 @@
-#include "HelloWorldScene.h"
+#include "framework.h"
 
 USING_NS_CC;
 
@@ -32,36 +32,49 @@ bool HelloWorld::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+    auto closeItem = MenuItemImage::create("images/exitButtons.png", "images/exitButtons.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
 
     if (closeItem == nullptr ||
         closeItem->getContentSize().width <= 0 ||
         closeItem->getContentSize().height <= 0)
     {
-        problemLoading("'CloseNormal.png' and 'CloseSelected.png'");
+        problemLoading("'images/exitButtons.png' and 'images/exitButtons.png'");
     }
     else
     {
-        float x = origin.x + visibleSize.width - closeItem->getContentSize().width/2;
-        float y = origin.y + closeItem->getContentSize().height/2;
+        float x = origin.x + visibleSize.width - closeItem->getContentSize().width;
+        float y = origin.y + closeItem->getContentSize().height + 200;
         closeItem->setPosition(Vec2(x,y));
     }
 
     // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
+    auto menuClose = Menu::create(closeItem, NULL);
+    menuClose->setPosition(Vec2::ZERO);
+    this->addChild(menuClose, 1);
 
     /////////////////////////////
     // 3. add your codes below...
+    auto startGame = MenuItemImage::create("images/buttonPlay.png","images/buttonPlay.png", CC_CALLBACK_1(HelloWorld::menuGameAccess, this));
+    if (startGame == nullptr ||
+        startGame->getContentSize().width <= 0 ||
+        startGame->getContentSize().height <= 0)
+    {
+        problemLoading("'images/buttonPlay.png' and 'images/buttonPlay.png'");
+    }
+    else
+    {
+        float x = origin.x + visibleSize.width - startGame->getContentSize().width;
+        float y = origin.y + startGame->getContentSize().height + 400;
+        startGame->setPosition(Vec2(x, y));
+    }
 
+    auto menuGame = Menu::create(startGame, NULL);
+    menuGame->setPosition(Vec2::ZERO);
+    this->addChild(menuGame, 1);
     // add a label shows "Hello World"
     // create and initialize a label
 
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("Antsming", "fonts/Marker Felt.ttf", 34);
     if (label == nullptr)
     {
         problemLoading("'fonts/Marker Felt.ttf'");
@@ -75,21 +88,6 @@ bool HelloWorld::init()
         // add the label as a child to this layer
         this->addChild(label, 1);
     }
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-    if (sprite == nullptr)
-    {
-        problemLoading("'HelloWorld.png'");
-    }
-    else
-    {
-        // position the sprite on the center of the screen
-        sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-        // add the sprite as a child to this layer
-        this->addChild(sprite, 0);
-    }
     return true;
 }
 
@@ -99,10 +97,10 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
     //Close the cocos2d-x game scene and quit the application
     Director::getInstance()->end();
 
-    /*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() as given above,instead trigger a custom event created in RootViewController.mm as below*/
-
-    //EventCustom customEndEvent("game_scene_close_event");
-    //_eventDispatcher->dispatchEvent(&customEndEvent);
-
+}
+void HelloWorld::menuGameAccess(Ref* pSender)
+{
+    //Change the cocos2d-x scene 
+    Director::getInstance()->replaceScene(Game::createScene());
 
 }
