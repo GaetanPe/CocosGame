@@ -14,29 +14,38 @@ Antity::Antity(float xx, float yy)
 {
     antX = xx;
     antY = yy;
+    antSpeedX = antDefaultSpeed;
+    antSpeedY = antDefaultSpeed;
 
     antPhysicsBody = nullptr;
 }
 
 Antity::~Antity()
 {
-    
 }
 
 Antity* Antity::initAnt()
 {
     // Create sprite and make it use the physics properties
-    setTexture(pathToAntTexture + "ant.png");
-    antX = 2 * getContentSize().width;
-    antY = getContentSize().height;
+    setTexture(pathToAntTexture + "ant2.png");
+    
+    initAntSub(0, 1000);
+
+    return this;
+}
+
+void Antity::initAntSub(float xx, float yy)
+{
+    antX = xx;
+    antY = yy;
 
     setPosition(cocos2d::Vec2(antX, antY));
-    setAnchorPoint(cocos2d::Vec2(.5f, 0)); // Bottom left
-    setScaleX(-1.f);
+    setAnchorPoint(cocos2d::Vec2(.5f, 0)); // Bottom Mid
+    setScaleX(-1.f); // If going to the right by default
 
     setVisible(true);
-    
-    
+
+
 
     // Creating physics body
     int antSpriteWidth = getContentSize().width;
@@ -48,15 +57,13 @@ Antity* Antity::initAnt()
 
     // Creates movement
     antPhysicsBody -> setVelocity(cocos2d::Vec2(antSpeedX, antSpeedY));
-    
+
 
     // Adapt physics transformations
     addComponent(antPhysicsBody);
 
     // Update
     scheduleUpdate();
-
-    return this;
 }
 
 void Antity::outOfBoundsCheckX()
@@ -125,6 +132,9 @@ void Antity::outOfBoundsCheckY()
 
 void Antity::update(float dt)
 {
+    // Walls check
+    // wallCollisionCheck();
+
     // Out of bounds check
     outOfBoundsCheckX();
     outOfBoundsCheckY();

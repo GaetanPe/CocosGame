@@ -6,14 +6,16 @@
 #include "cocos2d.h"
 
 class Antity;
+class AntSpawner;
 
 class AntScene : public cocos2d::Scene
 {
     private :
 
         // Debug - Hitboxes
-        static const bool debugHitboxes = true;
+        static const bool debugHitboxes = false;
 
+        AntSpawner* antSpawner;
         vector<Antity*> antVector;
 
     public :
@@ -30,10 +32,14 @@ class AntScene : public cocos2d::Scene
 
         virtual bool init();
 
-        // implement the "static create()" method manually
-        CREATE_FUNC(AntScene);
+        void functionnalAntCode();
 
         void update(float dt) override;
+
+
+
+        // implement the "static create()" method manually
+        CREATE_FUNC(AntScene);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -25,12 +25,13 @@ class Antity : public cocos2d::Sprite
 
 		string pathToAntTexture = "../Resources/images/";
 
-
+		
 	public :
 		Antity();
 		Antity(float xx, float yy);
 		~Antity();
 		Antity* initAnt();
+		void initAntSub(float xx = 0, float yy = 1000);
 
 		// "::create()" function
 		CREATE_FUNC(Antity);

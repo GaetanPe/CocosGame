@@ -16,7 +16,7 @@
     <ClCompile Include="Antity.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
-    <ClCompile Include="AntPhysicWorld.cpp">
+    <ClCompile Include="AntSpawner.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,11 +102,11 @@
     <ClInclude Include="Antity.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="AntPhysicWorld.h">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClInclude>
     <ClInclude Include="framework.h">
       <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="AntSpawner.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

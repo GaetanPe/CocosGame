@@ -56,7 +56,7 @@ bool AntScene::onCollision(PhysicsContact& contact)
 Scene* AntScene::createAntScene()
 {
     Scene* antScene = Scene::createWithPhysics();
-    antScene->getPhysicsWorld()->setGravity(Vect(.0f, -981.f));
+    antScene -> getPhysicsWorld() -> setGravity(Vect(.0f, -981.f));
 
     if(AntScene::debugHitboxes)
         antScene -> getPhysicsWorld() -> setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
@@ -112,6 +112,15 @@ bool AntScene::init()
     /////////////////////////////
     // 3. add your codes below...
 
+    functionnalAntCode();
+    
+    /////////////////////////////
+
+    return true;
+}
+
+void AntScene::functionnalAntCode()
+{
     // Temporary background
     Sprite* bg = Sprite::create("../Resources/images/HelloWorld.png");
     bg -> setAnchorPoint(cocos2d::Vec2(0, 1));
@@ -122,17 +131,18 @@ bool AntScene::init()
 
     // Creating ants
     antVector.push_back(Antity::create() -> initAnt());
+    //antVector.push_back(Antity::create() -> initAnt());
+    //
+    //for (int i = 0; i < antVector.size(); i++)
+        addChild(antVector[0]);
 
-    for (int i = 0; i < antVector.size(); i++)
-        addChild(antVector[i]);
-    
-        
+
     initPhysics();
-    
-    /////////////////////////////
-
-    return true;
 }
+
+
+
+
 
 void AntScene::update(float dt)
 {

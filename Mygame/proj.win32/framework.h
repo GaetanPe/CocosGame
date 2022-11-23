@@ -10,6 +10,9 @@ using namespace std;
 
 #include "AppDelegate.h"
 
-#include "AntPhysicWorld.h"
+
+// Game objects
+
 #include "AntScene.h"
+#include "AntSpawner.h"
 #include "Antity.h"
