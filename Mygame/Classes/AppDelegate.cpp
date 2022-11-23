@@ -1,5 +1,5 @@
 
-#include "../proj.win32/framework.h"
+#include "framework.h"
 
 // #define USE_AUDIO_ENGINE 1
 
