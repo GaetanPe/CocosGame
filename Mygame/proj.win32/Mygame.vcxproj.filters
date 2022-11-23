@@ -16,6 +16,15 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files\Classes\Game</Filter>
     </ClCompile>
+    <ClCompile Include="AntScene.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="AntSpawner.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Antity.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.h">
@@ -51,6 +60,18 @@
     <ClInclude Include="Game.h">
       <Filter>Source Files\Classes\Game</Filter>
     </ClInclude>
+    <ClInclude Include="AntScene.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="AntSpawner.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Antity.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Z:\source\repos\CocosGame\Mygame\CMakeLists.txt" />
@@ -81,6 +102,9 @@
     </Filter>
     <Filter Include="Source Files\Classes\Game">
       <UniqueIdentifier>{d1fa441f-e168-4872-8a57-9afe5541730e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Gameplay">
+      <UniqueIdentifier>{35247df7-69ba-4536-bfd6-1d569b36f12c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

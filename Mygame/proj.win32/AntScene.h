@@ -1,11 +1,9 @@
 #pragma once
 
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
-
 #include "cocos2d.h"
 
 class Antity;
+class AntSpawner;
 
 class AntScene : public cocos2d::Scene
 {
@@ -14,6 +12,7 @@ class AntScene : public cocos2d::Scene
         // Debug - Hitboxes
         static const bool debugHitboxes = false;
 
+        AntSpawner* antSpawner;
         vector<Antity*> antVector;
 
     public :
@@ -30,8 +29,12 @@ class AntScene : public cocos2d::Scene
 
         virtual bool init();
 
+        void functionnalAntCode();
+
+        void update(float dt) override;
+
+
+
         // implement the "static create()" method manually
         CREATE_FUNC(AntScene);
 };
-
-#endif // __HELLOWORLD_SCENE_H__

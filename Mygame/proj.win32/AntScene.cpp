@@ -56,14 +56,12 @@ bool AntScene::onCollision(PhysicsContact& contact)
 Scene* AntScene::createAntScene()
 {
     Scene* antScene = Scene::createWithPhysics();
-    antScene -> getPhysicsWorld() -> setGravity(Vect(0, 0));
+    antScene -> getPhysicsWorld() -> setGravity(Vect(.0f, -981.f));
 
     if(AntScene::debugHitboxes)
         antScene -> getPhysicsWorld() -> setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
 
     auto antLayer = AntScene::create();
-    // antLayer -> setPhysicsWorld(antScene->getPhysicsWorld());
-
     antScene -> addChild(antLayer);
 
     return antScene;
@@ -71,8 +69,6 @@ Scene* AntScene::createAntScene()
 
 
 
-
-// on "init" you need to initialize your instance
 bool AntScene::init()
 {
     //////////////////////////////
@@ -116,28 +112,39 @@ bool AntScene::init()
     /////////////////////////////
     // 3. add your codes below...
 
-    // Temporary background
-    Sprite* bg = Sprite::create("HelloWorld.png");
-    bg -> setAnchorPoint(Vec2());
-    bg -> setPosition(0, 0);
-    this -> addChild(bg, -1);
-
-
-    // Creating ants
-    antVector.push_back(new Antity());
-    antVector.push_back(new Antity());
-
-    for (int i = 0; i < antVector.size(); i++)
-    {
-        setPhysicsBody(antVector[i] -> antSprite);
-        this -> addChild(antVector[i] -> antSprite);
-    }
-        
-
-
-    initPhysics();
+    functionnalAntCode();
     
     /////////////////////////////
 
     return true;
+}
+
+void AntScene::functionnalAntCode()
+{
+    // Temporary background
+    Sprite* bg = Sprite::create("../Resources/images/HelloWorld.png");
+    bg -> setAnchorPoint(cocos2d::Vec2(0, 1));
+    bg -> setPosition(0, cocos2d::Director::getInstance() -> getVisibleSize().height);
+    bg -> setScale(.4f, .4f);
+    this -> addChild(bg, -1);
+
+
+    // Creating ants
+    antVector.push_back(Antity::create() -> initAnt());
+    //antVector.push_back(Antity::create() -> initAnt());
+    //
+    //for (int i = 0; i < antVector.size(); i++)
+        addChild(antVector[0]);
+
+
+    initPhysics();
+}
+
+
+
+
+
+void AntScene::update(float dt)
+{
+    
 }
