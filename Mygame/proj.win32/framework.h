@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include<ctime>
 #include <stdio.h>
 using namespace std;
 
@@ -13,3 +14,4 @@ using namespace std;
 #include "AntPhysicWorld.h"
 #include "AntScene.h"
 #include "Antity.h"
+#include "Game.h"

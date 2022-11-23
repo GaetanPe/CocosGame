@@ -13,6 +13,9 @@
     <ClCompile Include="Z:\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.h">
@@ -45,6 +48,9 @@
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files\Classes\Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Z:\source\repos\CocosGame\Mygame\CMakeLists.txt" />
@@ -72,6 +78,9 @@
     </Filter>
     <Filter Include="Source Files\proj.win32">
       <UniqueIdentifier>{D2A05C95-38B6-3898-879E-D670B5432B5F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Classes\Game">
+      <UniqueIdentifier>{d1fa441f-e168-4872-8a57-9afe5541730e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
