@@ -13,7 +13,7 @@ Antity::~Antity()
 void Antity::initAnt()
 {
     // Create sprite and make it use the physics properties
-    antSprite = cocos2d::Sprite::create("ant.png");
+    antSprite = cocos2d::Sprite::create("../Resources/images/ant.png");
     antSprite -> setPosition(cocos2d::Vec2(2 * antSprite -> getContentSize().width, 2 * antSprite -> getContentSize().height));
     antSprite -> setAnchorPoint(cocos2d::Vec2(0, 1)); // Top left
     antSprite -> setVisible(true);

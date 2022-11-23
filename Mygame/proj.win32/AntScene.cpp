@@ -117,7 +117,7 @@ bool AntScene::init()
     // 3. add your codes below...
 
     // Temporary background
-    Sprite* bg = Sprite::create("HelloWorld.png");
+    Sprite* bg = Sprite::create("../Resources/images/ant.png");
     bg -> setAnchorPoint(Vec2());
     bg -> setPosition(0, 0);
     this -> addChild(bg, -1);
