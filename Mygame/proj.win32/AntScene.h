@@ -12,7 +12,7 @@ class AntScene : public cocos2d::Scene
     private :
 
         // Debug - Hitboxes
-        static const bool debugHitboxes = false;
+        static const bool debugHitboxes = true;
 
         vector<Antity*> antVector;
 
@@ -32,6 +32,8 @@ class AntScene : public cocos2d::Scene
 
         // implement the "static create()" method manually
         CREATE_FUNC(AntScene);
+
+        void update(float dt) override;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -4,9 +4,6 @@
     <ClCompile Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.cpp">
-      <Filter>Source Files\Classes</Filter>
-    </ClCompile>
     <ClCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
@@ -25,9 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.h">
-      <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.h">
