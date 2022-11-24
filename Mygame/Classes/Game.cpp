@@ -1,4 +1,4 @@
-#include"framework.h"
+#include "framework.h"
 
 USING_NS_CC;
 
@@ -30,45 +30,33 @@ bool Game::init()
 //update
 void Game::update(float dt)
 {
-
 	auto director = Director::getInstance();
+	auto dirVisibleOrigin = director -> getVisibleOrigin();
+	auto dirVisibleSize = director -> getVisibleSize();
+	
 	m_count += dt;
 	float gameTimer = getTimer();
 	gameTimer -=  m_count;
 	auto timer = Label::createWithTTF(to_string(gameTimer), "fonts/Marker Felt.ttf", 24);
+
 	if (timer == nullptr)
-	{
 		problemLoading("'fonts/Marker Felt.ttf'");
-	}
 	else
 	{
 		// position the label on the center of the screen
-		timer->setPosition(Vec2(origin.x + visibleSize.width / 2,
-			origin.y + visibleSize.height - timer->getContentSize().height));
+		timer -> setPosition(Vec2(dirVisibleOrigin.x + dirVisibleSize.width / 2, dirVisibleOrigin.y + dirVisibleSize.height - (timer -> getContentSize().height)));
 
 		// add the label as a child to this layer
-		this->addChild(timer, 1);
+		this -> addChild(timer, 1);
 	}
-	this->addChild(timer, 1);
+
 	if (gameTimer < 1) 
 	{
 		gameOver();
 		auto scene = HelloWorld::createScene();
-		director->replaceScene(scene);
+		director -> replaceScene(scene);
 	}
 	
-}
-
-//getters
-float Game::getTimer()
-{
-	return m_duration;
-}
-
-//setters
-void Game::setTimer(float timer)
-{
-	timer = m_duration;
 }
 
 //utilities

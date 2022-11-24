@@ -11,10 +11,10 @@ public:
 	void update(float) override;
 	
 	//getters
-	float getTimer();
+	float getTimer() { return m_duration; }
 
 	//setters 
-	void setTimer(float timer);
+	void setTimer(float timer) { timer = m_duration; }
 
 	//utilities
 	bool gameOver();
