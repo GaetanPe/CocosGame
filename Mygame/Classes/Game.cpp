@@ -32,6 +32,7 @@ void Game::update(float dt)
 {
 
 	auto director = Director::getInstance();
+	auto visibleSize = Director::getInstance()->getVisibleSize();
 	m_count += dt;
 	float gameTimer = getTimer();
 	gameTimer -=  m_count;
@@ -43,13 +44,12 @@ void Game::update(float dt)
 	else
 	{
 		// position the label on the center of the screen
-		timer->setPosition(Vec2(origin.x + visibleSize.width / 2,
-			origin.y + visibleSize.height - timer->getContentSize().height));
+		timer->setPosition(Vec2(director->getVisibleOrigin().x + visibleSize.width / 2,
+			director->getVisibleOrigin().y + visibleSize.height - timer->getContentSize().height));
 
 		// add the label as a child to this layer
 		this->addChild(timer, 1);
 	}
-	this->addChild(timer, 1);
 	if (gameTimer < 1) 
 	{
 		gameOver();
