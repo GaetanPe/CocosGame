@@ -13,17 +13,17 @@
     <ClCompile Include="Z:\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\AntSpawner.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\Antity.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AntScene.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AntSpawner.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Game.cpp">
-      <Filter>Source Files\Classes\Game</Filter>
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,8 +102,8 @@
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\framework.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClInclude Include="..\Classes\AntSpawner.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Antity.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
@@ -111,11 +111,11 @@
     <ClInclude Include="..\Classes\AntScene.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AntSpawner.h">
+    <ClInclude Include="..\Classes\framework.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Game.h">
-      <Filter>Source Files\Classes\Game</Filter>
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -148,11 +148,8 @@
     <Filter Include="Source Files\proj.win32">
       <UniqueIdentifier>{D2A05C95-38B6-3898-879E-D670B5432B5F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Game">
-      <UniqueIdentifier>{1cf5692a-9f7f-45c2-9cff-682fb0f42d6c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Classes\Gameplay">
-      <UniqueIdentifier>{faaf1ebd-b63c-4ae5-848b-bb4cda01f9c1}</UniqueIdentifier>
+      <UniqueIdentifier>{9abd2368-eb36-46e7-85cf-67095ecdd680}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
