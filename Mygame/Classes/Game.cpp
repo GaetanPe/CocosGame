@@ -6,7 +6,8 @@ cocos2d::Scene* Game::createScene()
 {
 	auto scene = cocos2d::Scene::create();
 	auto layer = Game::create();
-	scene->addChild(layer);
+	scene -> addChild(layer);
+
 	return scene;
 }
 
@@ -20,10 +21,9 @@ static void problemLoading(const char* filename)
 bool Game::init()
 {
 	if (!Layer::init())
-	{
 		return false;
-	}
-	this->scheduleUpdate();
+
+	this -> scheduleUpdate();
 	return true;
 }
 
