@@ -5,7 +5,7 @@
 class Antity;
 class AntSpawner;
 
-class AntScene : public cocos2d::Scene
+class AntScene : public cocos2d::Layer
 {
     private :
 

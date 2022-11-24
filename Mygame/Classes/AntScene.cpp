@@ -12,13 +12,8 @@ static void problemLoading(const char* filename)
 
 void AntScene::menuCloseCallback(Ref* pSender)
 {
-    //Close the cocos2d-x game scene and quit the application
+    // Close the cocos2d-x game scene and quit the application
     Director::getInstance() -> end();
-
-    /*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() as given above,instead trigger a custom event created in RootViewController.mm as below*/
-
-    //EventCustom customEndEvent("game_scene_close_event");
-    //_eventDispatcher->dispatchEvent(&customEndEvent);
 }
 
 /*-------------------------------------------------------------------*/
@@ -71,7 +66,6 @@ Scene* AntScene::createAntScene()
 
 bool AntScene::init()
 {
-
     functionnalAntCode();
 
     return true;
