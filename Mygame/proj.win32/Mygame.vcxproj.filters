@@ -22,9 +22,6 @@
     <ClCompile Include="..\Classes\AntScene.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Game.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.h">
@@ -102,20 +99,17 @@
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\AntScene.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\AntSpawner.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Antity.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AntScene.h">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\framework.h">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Game.h">
-      <Filter>Source Files\Classes\Gameplay</Filter>
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +143,7 @@
       <UniqueIdentifier>{D2A05C95-38B6-3898-879E-D670B5432B5F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes\Gameplay">
-      <UniqueIdentifier>{9abd2368-eb36-46e7-85cf-67095ecdd680}</UniqueIdentifier>
+      <UniqueIdentifier>{4e888e57-072a-4f35-8d80-b64300345015}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

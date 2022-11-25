@@ -101,6 +101,6 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 void HelloWorld::menuGameAccess(Ref* pSender)
 {
     //Change the cocos2d-x scene 
-    Director::getInstance()->replaceScene(Game::createScene());
+    Director::getInstance()->replaceScene(AntScene::createAntScene());
 
 }
