@@ -13,16 +13,16 @@
     <ClCompile Include="C:\Users\tbautista\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AntSpawner.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Antity.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\AntScene.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\AntSpawner.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\AntGameTimer.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Antity.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
   </ItemGroup>
@@ -108,14 +108,14 @@
     <ClInclude Include="..\Classes\AntSpawner.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\AntGameTimer.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\Antity.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\framework.h">
       <Filter>Source Files\Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\AntGameTimer.h">
-      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -149,7 +149,7 @@
       <UniqueIdentifier>{726F478D-A3F4-3169-AB1E-F6AAE46D75DA}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes\Gameplay">
-      <UniqueIdentifier>{de629b78-9081-47dc-8096-1221cd88b03b}</UniqueIdentifier>
+      <UniqueIdentifier>{8323bea4-3f54-4e59-8b71-4dca188d9854}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -18,7 +18,6 @@ class AntGameTimer
         ~AntGameTimer();
 
 
-        
         float getTimer() { return m_duration; }
         void setTimer(float timer) { timer = m_duration; }
 

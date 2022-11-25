@@ -27,11 +27,12 @@ class Antity : public cocos2d::Sprite
 
 		
 	public :
+
 		Antity();
 		Antity(float xx, float yy);
 		~Antity();
-		Antity* initAnt();
-		void initAntSub(float xx = 0, float yy = 1000);
+		Antity* initAnt(float xx = 70, float yy = 300);
+		void initAntSub(float xx = 70, float yy = 300);
 
 		// "::create()" function
 		CREATE_FUNC(Antity);

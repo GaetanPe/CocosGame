@@ -12,9 +12,11 @@ class AntScene : public cocos2d::Layer
         // Debug - Hitboxes
         static const bool debugHitboxes = false;
 
+        // Spawner
         AntSpawner* antSpawner;
         vector<Antity*> antVector;
 
+        // Timer
         AntGameTimer* antSceneTimer;
 
 
@@ -55,3 +57,5 @@ class AntScene : public cocos2d::Layer
         // implement the "static create()" method manually
         CREATE_FUNC(AntScene);
 };
+
+AntScene* getAntScene();
