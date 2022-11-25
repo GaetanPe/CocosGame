@@ -14,12 +14,54 @@ void AntScene::menuCloseCallback(Ref* pSender)
 {
     //Close the cocos2d-x game scene and quit the application
     Director::getInstance() -> end();
-
-    /*To navigate back to native iOS screen(if present) without quitting the application  ,do not use Director::getInstance()->end() as given above,instead trigger a custom event created in RootViewController.mm as below*/
-
-    //EventCustom customEndEvent("game_scene_close_event");
-    //_eventDispatcher->dispatchEvent(&customEndEvent);
 }
+
+
+
+/*-------------------------------------------------------------------*/
+/*                            Init scene                             */
+/*-------------------------------------------------------------------*/
+
+
+Scene* AntScene::createAntScene()
+{
+    Scene* antScene = Scene::createWithPhysics();
+    antScene -> getPhysicsWorld() -> setGravity(Vect(.0f, -981.f));
+
+    if(AntScene::debugHitboxes)
+        antScene -> getPhysicsWorld() -> setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+
+    auto antLayer = AntScene::create();
+    antScene -> addChild(antLayer);
+
+    return antScene;
+}
+
+bool AntScene::init()
+{
+    if (!Layer::init())
+        return false;
+
+
+    functionnalAntCode();
+
+    return true;
+}
+
+void AntScene::functionnalAntCode()
+{
+
+    // Creating ants
+    antVector.push_back(Antity::create() -> initAnt());
+    //antVector.push_back(Antity::create() -> initAnt());
+    //
+    //for (int i = 0; i < antVector.size(); i++)
+    addChild(antVector[0]);
+
+
+    initPhysics();
+}
+
 
 /*-------------------------------------------------------------------*/
 /*                          Physics methods                          */
@@ -47,55 +89,46 @@ bool AntScene::onCollision(PhysicsContact& contact)
 }
 
 
-
 /*-------------------------------------------------------------------*/
-/*                            Init scene                             */
+/*                            Game over                              */
 /*-------------------------------------------------------------------*/
 
-
-Scene* AntScene::createAntScene()
+bool AntScene::gameOver()
 {
-    Scene* antScene = Scene::createWithPhysics();
-    antScene -> getPhysicsWorld() -> setGravity(Vect(.0f, -981.f));
-
-    if(AntScene::debugHitboxes)
-        antScene -> getPhysicsWorld() -> setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
-
-    auto antLayer = AntScene::create();
-    antScene -> addChild(antLayer);
-
-    return antScene;
-}
-
-
-
-bool AntScene::init()
-{
-
-    functionnalAntCode();
-
     return true;
 }
 
-void AntScene::functionnalAntCode()
-{
 
-    // Creating ants
-    antVector.push_back(Antity::create() -> initAnt());
-    //antVector.push_back(Antity::create() -> initAnt());
-    //
-    //for (int i = 0; i < antVector.size(); i++)
-        addChild(antVector[0]);
-
-
-    initPhysics();
-}
-
-
-
-
+/*-------------------------------------------------------------------*/
+/*                              Update                               */
+/*-------------------------------------------------------------------*/
 
 void AntScene::update(float dt)
 {
-    
+    auto director = Director::getInstance();
+    auto dirVisibleOrigin = director -> getVisibleOrigin();
+    auto dirVisibleSize = director -> getVisibleSize();
+
+    m_count += dt;
+    float gameTimer = getTimer();
+    gameTimer -= m_count;
+    auto timer = Label::createWithTTF(to_string(gameTimer), "fonts/Marker Felt.ttf", 24);
+
+    if (timer == nullptr)
+        problemLoading("'fonts/Marker Felt.ttf'");
+    else
+    {
+        // Position the label on the center of the screen
+        timer -> setPosition(Vec2(dirVisibleOrigin.x + dirVisibleSize.width / 2, dirVisibleOrigin.y + dirVisibleSize.height - (timer -> getContentSize().height)));
+
+        // Add the label as a child to this layer
+        this -> addChild(timer, 1);
+    }
+
+    if (gameTimer < 1)
+    {
+        gameOver();
+        auto scene = HelloWorld::createScene();
+        director -> replaceScene(scene);
+    }
 }

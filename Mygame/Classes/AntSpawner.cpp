@@ -29,6 +29,21 @@ void AntSpawner::spawn()
 
 void AntSpawner::update(float dt)
 {
-	int count = 0;
-	// if(antEntranceVetor.size())
+	int antCount = 0;
+	float currentTime = 0; // = Game::getTime(); // A changer avec l'introduction du temps de Game
+	float lastAntSpawnTime = currentTime; // A changer avec l'introduction du temps de Game
+	
+	// While there's still ants in the spawner...
+	while(antCount < antEntranceVector.size())
+	{
+		// Timer for the next ant to spawn
+		while((currentTime - lastAntSpawnTime) < antSpawnTime)
+		{
+			// currentTime = Game::getTimer(); // Timer pas encore global, à régler
+		}
+
+		// Once timer for the next ant to spawn is done...
+		lastAntSpawnTime = currentTime;
+		antCount++;
+	}
 }

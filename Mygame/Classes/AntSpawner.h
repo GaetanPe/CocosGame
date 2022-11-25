@@ -8,6 +8,7 @@ class AntSpawner : public cocos2d::Sprite
 		float spawnY;
 
 		vector<Antity*> antEntranceVector;
+		float antSpawnTime = 2.f; // Par défaut à 2 (secondes je suppose ?)
 
 	public :
 

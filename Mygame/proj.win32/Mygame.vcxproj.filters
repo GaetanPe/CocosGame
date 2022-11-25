@@ -13,17 +13,14 @@
     <ClCompile Include="Z:\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\AntSpawner.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\Antity.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AntScene.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\AntSpawner.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Game.cpp">
-      <Filter>Source Files\Classes\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -114,8 +111,12 @@
     <ClInclude Include="..\Classes\framework.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Game.h">
-      <Filter>Source Files\Classes\Game</Filter>
+
+    <ClInclude Include="..\Classes\Antity.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework.h">
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +154,7 @@
     </Filter>
     <Filter Include="Source Files\Classes\Game">
       <UniqueIdentifier>{f18edd7c-4e28-47d9-86d2-41946697d4de}</UniqueIdentifier>
+      <UniqueIdentifier>{4e888e57-072a-4f35-8d80-b64300345015}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
