@@ -65,7 +65,7 @@ bool AntScene::init()
 void AntScene::functionnalAntCode()
 {
     // Timer
-    antSceneTimer = new AntGameTimer();
+    antSceneTimer = new AntGameTimer(antSceneMaxTime);
     addChild(antSceneTimer -> getAntTimerLabel(), 1);
 
     // Spawner
@@ -125,10 +125,10 @@ bool AntScene::gameOver()
 void AntScene::update(float dt)
 {
     // Timer
-    antSceneTimer -> updateTimer(dt);
+    antSceneTimer -> updateTimer(dt, false);
 
     // Spawner
-    antSpawner -> updateSpawner(dt);
+    antSpawner -> updateSpawner(dt, this);
 
     // Game over condition
     if(gameOver())

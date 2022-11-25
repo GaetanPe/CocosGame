@@ -29,7 +29,7 @@ Antity* Antity::initAnt(float xx, float yy)
     // Create sprite and make it use the physics properties
     setTexture(pathToAntTexture + "ant2.png");
     
-    initAntSub();
+    initAntSub(xx, yy);
 
     return this;
 }
@@ -44,7 +44,6 @@ void Antity::initAntSub(float xx, float yy)
     setScaleX(-1.f); // If going to the right by default
 
     setVisible(true);
-
 
 
     // Creating physics body

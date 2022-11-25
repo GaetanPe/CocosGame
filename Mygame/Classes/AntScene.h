@@ -18,7 +18,7 @@ class AntScene : public cocos2d::Layer
 
         // Timer
         AntGameTimer* antSceneTimer;
-
+        float antSceneMaxTime = 300.f + 1.f;
 
 
 

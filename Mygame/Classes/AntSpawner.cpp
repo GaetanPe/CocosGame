@@ -20,6 +20,7 @@ void AntSpawner::initAntSpawner(float xx, float yy)
 	spawnX = xx;
 	spawnY = xx;
 
+
 	lastAntSpawnTime = 0.f;
 
 	// Sprite
@@ -31,7 +32,6 @@ void AntSpawner::initAntSpawner(float xx, float yy)
 }
 
 
-
 void AntSpawner::spawn()
 {
 	Antity* pAnt = Antity::create() -> initAnt(spawnX, spawnY);
@@ -41,13 +41,12 @@ void AntSpawner::spawn()
 }
 
 
-void AntSpawner::updateSpawner(float dt)
+void AntSpawner::updateSpawner(float dt, AntScene* scene)
 {
-	AntGameTimer* gameSceneTimer = getAntScene() -> getSceneTimer();
-	float currentTime = gameSceneTimer -> getTimer();
+	float currentTime = scene -> getSceneTimer() -> getTimer();
 
 	// Once timer for the next ant to spawn is done...
-	if((currentTime - lastAntSpawnTime) > antSpawnTime)
+	if(abs(currentTime - lastAntSpawnTime) > antSpawnTime && antSpawnVector.size() < maxAntSpawns)
 	{
 		spawn();
 		lastAntSpawnTime = currentTime;

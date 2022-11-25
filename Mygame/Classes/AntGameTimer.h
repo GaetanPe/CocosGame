@@ -12,9 +12,10 @@ class AntGameTimer
         
     public :
 
-        float m_duration = 300.f + 1.f; // + 1.f pour afficher un timer logique
+        float m_duration;
 
         AntGameTimer();
+        AntGameTimer(float initialTimer);
         ~AntGameTimer();
 
 
@@ -23,7 +24,7 @@ class AntGameTimer
 
         cocos2d::Label* getAntTimerLabel() { return timerLabel; }
 
-        void initAntGameTimer();
+        void initAntGameTimer(float initialTimer = 0.f);
 
-        void updateTimer(float dt);
+        void updateTimer(float dt, bool positive);
 };

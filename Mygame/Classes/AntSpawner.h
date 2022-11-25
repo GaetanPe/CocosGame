@@ -25,5 +25,5 @@ class AntSpawner : public cocos2d::Sprite
 
 		void spawn();
 		// void update(float dt) override;
-		void updateSpawner(float dt);
+		void updateSpawner(float dt, AntScene* scene);
 };
