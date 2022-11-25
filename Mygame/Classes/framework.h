@@ -17,5 +17,4 @@ using namespace std;
 
 #include "AntScene.h"
 #include "Antity.h"
-#include "Game.h"
 #include "AntSpawner.h"
