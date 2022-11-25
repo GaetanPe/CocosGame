@@ -15,6 +15,8 @@ using namespace std;
 
 // Game objects
 
+#include "AntGameTimer.h"
+
 #include "AntScene.h"
 #include "Antity.h"
 #include "AntSpawner.h"

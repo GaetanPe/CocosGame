@@ -45,18 +45,23 @@ bool AntScene::init()
 
     functionnalAntCode();
 
+    scheduleUpdate();
+
     return true;
 }
 
 void AntScene::functionnalAntCode()
 {
+    // Timer
+    antSceneTimer = new AntGameTimer();
+    addChild(antSceneTimer -> getAntTimerLabel(), 1);
 
     // Creating ants
     antVector.push_back(Antity::create() -> initAnt());
     //antVector.push_back(Antity::create() -> initAnt());
     //
     //for (int i = 0; i < antVector.size(); i++)
-    addChild(antVector[0]);
+    addChild(antVector[0], 0);
 
 
     initPhysics();
@@ -66,7 +71,6 @@ void AntScene::functionnalAntCode()
 /*-------------------------------------------------------------------*/
 /*                          Physics methods                          */
 /*-------------------------------------------------------------------*/
-
 
 void AntScene::initPhysics()
 {
@@ -95,7 +99,7 @@ bool AntScene::onCollision(PhysicsContact& contact)
 
 bool AntScene::gameOver()
 {
-    return true;
+    return antSceneTimer -> getTimer() < 1;
 }
 
 
@@ -105,30 +109,11 @@ bool AntScene::gameOver()
 
 void AntScene::update(float dt)
 {
-    auto director = Director::getInstance();
-    auto dirVisibleOrigin = director -> getVisibleOrigin();
-    auto dirVisibleSize = director -> getVisibleSize();
+    // Timer
+    antSceneTimer -> updateTimer(dt);
 
-    m_count += dt;
-    float gameTimer = getTimer();
-    gameTimer -= m_count;
-    auto timer = Label::createWithTTF(to_string(gameTimer), "fonts/Marker Felt.ttf", 24);
 
-    if (timer == nullptr)
-        problemLoading("'fonts/Marker Felt.ttf'");
-    else
-    {
-        // Position the label on the center of the screen
-        timer -> setPosition(Vec2(dirVisibleOrigin.x + dirVisibleSize.width / 2, dirVisibleOrigin.y + dirVisibleSize.height - (timer -> getContentSize().height)));
-
-        // Add the label as a child to this layer
-        this -> addChild(timer, 1);
-    }
-
-    if (gameTimer < 1)
-    {
-        gameOver();
-        auto scene = HelloWorld::createScene();
-        director -> replaceScene(scene);
-    }
+    // Game over condition
+    if(gameOver())
+        cocos2d::Director::getInstance() -> replaceScene(HelloWorld::createScene());
 }

@@ -15,8 +15,7 @@ class AntScene : public cocos2d::Layer
         AntSpawner* antSpawner;
         vector<Antity*> antVector;
 
-        float m_count = 0.f;
-        float m_duration = 300.f;
+        AntGameTimer* antSceneTimer;
 
 
 
@@ -29,8 +28,7 @@ class AntScene : public cocos2d::Layer
 
         /*-------------------- Timer --------------------*/
 
-        float getTimer() { return m_duration; }
-        void setTimer(float timer) { timer = m_duration; }
+        AntGameTimer* getSceneTimer() { return antSceneTimer; }
 
         /*-------------------- Init scene --------------------*/
 

@@ -29,7 +29,7 @@ Antity* Antity::initAnt()
     // Create sprite and make it use the physics properties
     setTexture(pathToAntTexture + "ant2.png");
     
-    initAntSub(0, 1000);
+    initAntSub(62, 500);
 
     return this;
 }
@@ -98,7 +98,6 @@ void Antity::outOfBoundsCheckX()
             break;
     }
 }
-
 void Antity::outOfBoundsCheckY()
 {
     auto screenSize = cocos2d::Director::getInstance() -> getVisibleSize();
