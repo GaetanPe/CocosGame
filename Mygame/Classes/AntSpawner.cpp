@@ -3,47 +3,52 @@
 
 AntSpawner::AntSpawner()
 {
-	spawnX = 0;
-	spawnY = 0;
+	initAntSpawner();
 }
 
 AntSpawner::AntSpawner(float xx, float yy)
 {
-	spawnX = xx;
-	spawnY = yy;
+	initAntSpawner(xx, yy);
 }
 
 AntSpawner::~AntSpawner()
 {
 }
 
-void AntSpawner::spawn()
+void AntSpawner::initAntSpawner(float xx, float yy)
 {
-	Antity* pAnt = Antity::create();
-	pAnt -> initAnt();
-    antEntranceVector.push_back(pAnt);
+	spawnX = xx;
+	spawnY = xx;
 
-    addChild(pAnt);
+
+	lastAntSpawnTime = 0.f;
+
+	// Sprite
+	setPosition(spawnX, spawnY);
+	setTexture(pathToAntSpawnerTexture + "block.png");
+
+	// Update
+	scheduleUpdate();
 }
 
 
-void AntSpawner::update(float dt)
+void AntSpawner::spawn()
 {
-	int antCount = 0;
-	float currentTime = 0; // = Game::getTime(); // A changer avec l'introduction du temps de Game
-	float lastAntSpawnTime = currentTime; // A changer avec l'introduction du temps de Game
-	
-	// While there's still ants in the spawner...
-	while(antCount < antEntranceVector.size())
-	{
-		// Timer for the next ant to spawn
-		while((currentTime - lastAntSpawnTime) < antSpawnTime)
-		{
-			// currentTime = Game::getTimer(); // Timer pas encore global, à régler
-		}
+	Antity* pAnt = Antity::create() -> initAnt(spawnX, spawnY);
+	antSpawnVector.push_back(pAnt);
 
-		// Once timer for the next ant to spawn is done...
+    getAntScene() -> addChild(pAnt);
+}
+
+
+void AntSpawner::updateSpawner(float dt, AntScene* scene)
+{
+	float currentTime = scene -> getSceneTimer() -> getTimer();
+
+	// Once timer for the next ant to spawn is done...
+	if(abs(currentTime - lastAntSpawnTime) > antSpawnTime && antSpawnVector.size() < maxAntSpawns)
+	{
+		spawn();
 		lastAntSpawnTime = currentTime;
-		antCount++;
 	}
 }

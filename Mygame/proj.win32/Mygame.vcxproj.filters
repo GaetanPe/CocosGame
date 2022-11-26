@@ -10,8 +10,9 @@
     <ClCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
-    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
+    <ClCompile Include="..\Classes\AntScene.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AntGameTimer.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
@@ -105,8 +106,20 @@
     <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\framework.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClCompile Include="..\Classes\AntGameTimer.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Antity.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.cpp" />
+    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.cpp" />
+    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Classes\AntScene.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AntSpawner.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
@@ -117,8 +130,70 @@
     <ClInclude Include="..\Classes\Antity.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\AntScene.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
+    <ClInclude Include="..\Classes\framework.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.h" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.h" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.h" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\proj.win32\resource.h" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\fonts\Marker Felt.ttf" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\fonts\arial.ttf" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\res\.gitkeep" />
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig2.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig3.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig4.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig5.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant2.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant3.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ants.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ants2.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\block.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\buttonPlay.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\exitButtons.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\explosion.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\fire_ant.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\out.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\pickaxe.png">
+      <Filter>Source Files\images</Filter>
+    </ClInclude>
+    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\plateforms.png">
+      <Filter>Source Files\images</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Explosions.h">
       <Filter>Source Files\Classes\Actions</Filter>
@@ -131,6 +206,7 @@
     <ResourceCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\game.rc">
       <Filter>Source Files\proj.win32</Filter>
     </ResourceCompile>
+    <ResourceCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\game.rc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resources">
@@ -159,6 +235,10 @@
     </Filter>
     <Filter Include="Source Files\Classes\Actions">
       <UniqueIdentifier>{10a1cf9b-e2bc-4040-bc5a-9c644a4ea1bd}</UniqueIdentifier>
+      <UniqueIdentifier>{8323bea4-3f54-4e59-8b71-4dca188d9854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\images">
+      <UniqueIdentifier>{3310af22-4710-4fb7-81a6-44e14f895ab8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

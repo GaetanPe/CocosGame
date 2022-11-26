@@ -6,14 +6,22 @@ AntGameTimer::AntGameTimer()
     initAntGameTimer();
 }
 
+AntGameTimer::AntGameTimer(float initialTimer)
+{
+    initAntGameTimer(initialTimer);
+}
+
 AntGameTimer::~AntGameTimer()
 {
 
 }
 
 
-void AntGameTimer::initAntGameTimer()
+void AntGameTimer::initAntGameTimer(float initialTimer)
 {
+    // Default timer
+    m_duration = initialTimer; 
+    
     // Creates the label
     timerLabel = cocos2d::Label::createWithTTF(to_string((int) m_duration), timerFontPath, 24);
     timerLabel -> setTextColor(cocos2d::Color4B::WHITE);
@@ -26,9 +34,9 @@ void AntGameTimer::initAntGameTimer()
 }
 
 
-void AntGameTimer::updateTimer(float dt)
+void AntGameTimer::updateTimer(float dt, bool positive)
 {
-    m_duration -= dt;
+    m_duration += (positive) ? dt : -dt;
 
     timerLabel -> setString(to_string((int) m_duration));
 }

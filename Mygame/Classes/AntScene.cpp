@@ -12,16 +12,26 @@ static void problemLoading(const char* filename)
 
 void AntScene::menuCloseCallback(Ref* pSender)
 {
-    //Close the cocos2d-x game scene and quit the application
+    // Close the cocos2d-x game scene and quit the application
     Director::getInstance() -> end();
 }
 
+
+/*-------------------------------------------------------------------*/
+/*                           Global scene                            */
+/*-------------------------------------------------------------------*/
+
+AntScene* a_pAntScene;
+
+AntScene* getAntScene()
+{
+    return a_pAntScene;
+}
 
 
 /*-------------------------------------------------------------------*/
 /*                            Init scene                             */
 /*-------------------------------------------------------------------*/
-
 
 Scene* AntScene::createAntScene()
 {
@@ -33,6 +43,8 @@ Scene* AntScene::createAntScene()
 
     auto antLayer = AntScene::create();
     antScene -> addChild(antLayer);
+
+    a_pAntScene = (AntScene*) antScene;
 
     return antScene;
 }
@@ -53,15 +65,19 @@ bool AntScene::init()
 void AntScene::functionnalAntCode()
 {
     // Timer
-    antSceneTimer = new AntGameTimer();
+    antSceneTimer = new AntGameTimer(antSceneMaxTime);
     addChild(antSceneTimer -> getAntTimerLabel(), 1);
 
+    // Spawner
+    antSpawner = new AntSpawner(200, 200);
+    addChild(antSpawner, 2);
+
     // Creating ants
-    antVector.push_back(Antity::create() -> initAnt());
+    //antVector.push_back(Antity::create() -> initAnt());
     //antVector.push_back(Antity::create() -> initAnt());
     //
     //for (int i = 0; i < antVector.size(); i++)
-    addChild(antVector[0], 0);
+    // addChild(antVector[0], 0);
 
 
     initPhysics();
@@ -102,7 +118,6 @@ bool AntScene::gameOver()
     return antSceneTimer -> getTimer() < 1;
 }
 
-
 /*-------------------------------------------------------------------*/
 /*                              Update                               */
 /*-------------------------------------------------------------------*/
@@ -110,8 +125,10 @@ bool AntScene::gameOver()
 void AntScene::update(float dt)
 {
     // Timer
-    antSceneTimer -> updateTimer(dt);
+    antSceneTimer -> updateTimer(dt, false);
 
+    // Spawner
+    antSpawner -> updateSpawner(dt, this);
 
     // Game over condition
     if(gameOver())

@@ -24,12 +24,12 @@ Antity::~Antity()
 {
 }
 
-Antity* Antity::initAnt()
+Antity* Antity::initAnt(float xx, float yy)
 {
     // Create sprite and make it use the physics properties
     setTexture(pathToAntTexture + "ant2.png");
     
-    initAntSub(62, 500);
+    initAntSub(xx, yy);
 
     return this;
 }
@@ -44,7 +44,6 @@ void Antity::initAntSub(float xx, float yy)
     setScaleX(-1.f); // If going to the right by default
 
     setVisible(true);
-
 
 
     // Creating physics body
@@ -90,7 +89,7 @@ void Antity::outOfBoundsCheckX()
 
         case OOBLimits::OOB_LEFT :
             setPosition(cocos2d::Vec2(getContentSize().width / 2, 0));
-            antPhysicsBody -> setVelocity(cocos2d::Vec2(antSpeedX, antPhysicsBody->getVelocity().y));
+            antPhysicsBody -> setVelocity(cocos2d::Vec2(antSpeedX, antPhysicsBody -> getVelocity().y));
             setScaleX(-1.f);
             break;
 
@@ -115,12 +114,12 @@ void Antity::outOfBoundsCheckY()
     switch(currentYoob)
     {
         case OOBLimits::OOB_UP :
-            //antPhysicsBody -> setVelocity(cocos2d::Vec2(-antSpeedX, -antSpeedY));
+            setPosition(cocos2d::Vec2(antX, screenSize.height - getContentSize().height));
+            antPhysicsBody -> setVelocity(cocos2d::Vec2(antPhysicsBody -> getVelocity().x, 0.0f));
             break;
 
         case OOBLimits::OOB_DOWN :
             setPosition(cocos2d::Vec2(antX, 0));
-            
             antPhysicsBody -> setVelocity(cocos2d::Vec2(antPhysicsBody->getVelocity().x, 0.0f));
             break;
 
