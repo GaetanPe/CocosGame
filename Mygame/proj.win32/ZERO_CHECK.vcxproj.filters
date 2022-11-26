@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\tbautista\source\repos\CocosGame\Mygame\proj.win32\CMakeFiles\397cc0a1b824f2996f378be449145db3\generate.stamp.rule">
+    <CustomBuild Include="Z:\source\repos\CocosGame\Mygame\proj.win32\CMakeFiles\8b1eeca6724462805eb241a7f1af4ee6\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{B2EAC45D-B6B1-393B-8A43-4183883F217A}</UniqueIdentifier>
+      <UniqueIdentifier>{88B45F46-37AC-317C-B70C-CAC86A3E50C8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
