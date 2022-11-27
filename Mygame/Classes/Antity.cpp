@@ -26,10 +26,12 @@ Antity::~Antity()
 
 Antity* Antity::initAnt(float xx, float yy)
 {
-    // Create sprite and make it use the physics properties
+    // Create sprite
     setTexture(pathToAntTexture + "ant2.png");
     
+    // Init object and physics then animate
     initAntSub(xx, yy);
+    runAntAnimation();
 
     return this;
 }
@@ -63,6 +65,19 @@ void Antity::initAntSub(float xx, float yy)
 
     // Update
     scheduleUpdate();
+}
+
+void Antity::runAntAnimation()
+{
+    // Create sprite and make it use the physics properties
+    antAnimFrames.pushBack(cocos2d::SpriteFrame::create(pathToAntTexture + "ant2.png", cocos2d::Rect(0, 0, 125, 255)));
+    antAnimFrames.pushBack(cocos2d::SpriteFrame::create(pathToAntTexture + "ant3.png", cocos2d::Rect(0, 0, 125, 255)));
+
+    antAnimation = cocos2d::Animation::createWithSpriteFrames(antAnimFrames, 0.2f);
+    antAnimate = cocos2d::Animate::create(antAnimation);
+
+    // Run it and repeat it forever
+    runAction(cocos2d::RepeatForever::create(antAnimate));
 }
 
 void Antity::outOfBoundsCheckX()

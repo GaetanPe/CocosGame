@@ -4,6 +4,7 @@
 
 class Antity;
 class AntSpawner;
+class AntFinish;
 
 class AntScene : public cocos2d::Layer
 {
@@ -14,6 +15,7 @@ class AntScene : public cocos2d::Layer
 
         // Spawner
         AntSpawner* antSpawner;
+        AntFinish* antFinish;
         vector<Antity*> antVector;
 
         // Timer
@@ -29,6 +31,8 @@ class AntScene : public cocos2d::Layer
 
 
         /*-------------------- Timer --------------------*/
+
+        vector<Antity*> getAntVector() { return antVector; }
 
         AntGameTimer* getSceneTimer() { return antSceneTimer; }
 

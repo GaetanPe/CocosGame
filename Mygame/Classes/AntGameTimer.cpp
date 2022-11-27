@@ -28,7 +28,6 @@ void AntGameTimer::initAntGameTimer(float initialTimer)
 
     // Position the label on the center of the screen
     auto director = cocos2d::Director::getInstance();
-    auto dirVisibleOrigin = director -> getVisibleOrigin();
     auto dirVisibleSize = director -> getVisibleSize();
     timerLabel -> setPosition(cocos2d::Vec2(dirVisibleSize.width / 2, dirVisibleSize.height - (timerLabel -> getContentSize().height)));
 }

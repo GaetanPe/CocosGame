@@ -1,11 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\Classes\AntScene.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
+    <ClCompile Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Classes\AppDelegate.cpp">
+      <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\AntSpawner.cpp">
-      <Filter>Source Files\Classes\Gameplay</Filter>
+    <ClCompile Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\thoba\source\repos\CocosGame\Mygame\proj.win32\main.cpp">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\thoba\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\AntGameTimer.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
@@ -13,16 +19,96 @@
     <ClCompile Include="..\Classes\Antity.cpp">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClCompile>
-    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.cpp" />
-    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.cpp" />
-    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.cpp" />
-    <ClCompile Include="Z:\source\repos\CocosGame\Mygame\cocos2d\cocos\precheader.cpp" />
+    <ClCompile Include="..\Classes\AntScene.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AntSpawner.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AntFinish.cpp">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\AntScene.h">
-      <Filter>Source Files\Classes\Gameplay</Filter>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Classes\AppDelegate.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\proj.win32\main.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\proj.win32\resource.h">
+      <Filter>Source Files\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\fonts\Marker Felt.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\fonts\arial.ttf">
+      <Filter>Resources\fonts</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant2.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant3.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant_dig.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant_dig2.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant_dig3.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant_dig4.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ant_dig5.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ants.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\ants2.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\block.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\buttonPlay.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\exitButtons.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\explosion.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\fire_ant.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\out.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\pickaxe.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\images\plateforms.png">
+      <Filter>Resources\images</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\thoba\source\repos\CocosGame\Mygame\Resources\res\.gitkeep">
+      <Filter>Resources\res</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AntSpawner.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\framework.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\AntGameTimer.h">
@@ -31,104 +117,45 @@
     <ClInclude Include="..\Classes\Antity.h">
       <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\framework.h">
-      <Filter>Source Files\Classes</Filter>
+    <ClInclude Include="..\Classes\AntScene.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\AppDelegate.h" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Classes\HelloWorldScene.h" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\proj.win32\main.h" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\proj.win32\resource.h" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\fonts\Marker Felt.ttf" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\fonts\arial.ttf" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\res\.gitkeep" />
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig2.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig3.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig4.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant_dig5.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant2.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ant3.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ants.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\ants2.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\block.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\buttonPlay.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\exitButtons.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\explosion.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\fire_ant.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\out.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\pickaxe.png">
-      <Filter>Source Files\images</Filter>
-    </ClInclude>
-    <ClInclude Include="Z:\source\repos\CocosGame\Mygame\Resources\images\plateforms.png">
-      <Filter>Source Files\images</Filter>
+    <ClInclude Include="..\Classes\AntFinish.h">
+      <Filter>Source Files\Classes\Gameplay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Z:\source\repos\CocosGame\Mygame\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\thoba\source\repos\CocosGame\Mygame\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Z:\source\repos\CocosGame\Mygame\proj.win32\game.rc" />
+    <ResourceCompile Include="C:\Users\thoba\source\repos\CocosGame\Mygame\proj.win32\game.rc">
+      <Filter>Source Files\proj.win32</Filter>
+    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resources">
-      <UniqueIdentifier>{6D0B7B7C-7D50-3391-85A9-F481179AB739}</UniqueIdentifier>
+      <UniqueIdentifier>{2D7EDB0E-FC82-3B04-885D-A12728D33A9B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\fonts">
-      <UniqueIdentifier>{04C733C2-3128-3536-A30A-F86DD9ABBA01}</UniqueIdentifier>
+      <UniqueIdentifier>{2879DBEF-404B-3194-B34C-715387094325}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\images">
-      <UniqueIdentifier>{628F6D15-8DFD-3EEB-889F-A5A065C64051}</UniqueIdentifier>
+      <UniqueIdentifier>{6193C602-4419-3B4E-A676-0A54F3AD6C08}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\res">
-      <UniqueIdentifier>{5117C701-1390-3C3D-A947-982E0811B1D3}</UniqueIdentifier>
+      <UniqueIdentifier>{C8F6110B-DA9D-31B3-9BEA-773BB938B0C9}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{22842AD3-867A-330E-9C91-23E994FC9AC4}</UniqueIdentifier>
+      <UniqueIdentifier>{C36242CE-D2DD-386D-87A4-A6F66C4E9730}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes">
-      <UniqueIdentifier>{23560677-05E8-3120-B239-D7D2E86B5C00}</UniqueIdentifier>
+      <UniqueIdentifier>{6C1E71B3-8ACD-3F66-9E5A-2BDAB3364303}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\proj.win32">
-      <UniqueIdentifier>{726F478D-A3F4-3169-AB1E-F6AAE46D75DA}</UniqueIdentifier>
+      <UniqueIdentifier>{2A7E7421-0339-3F9A-A428-16E1803CF672}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\Classes\Gameplay">
-      <UniqueIdentifier>{8323bea4-3f54-4e59-8b71-4dca188d9854}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\images">
-      <UniqueIdentifier>{3310af22-4710-4fb7-81a6-44e14f895ab8}</UniqueIdentifier>
+      <UniqueIdentifier>{b0693c82-01e7-4348-a36a-fca7d9b96adf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

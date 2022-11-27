@@ -18,7 +18,7 @@ AntSpawner::~AntSpawner()
 void AntSpawner::initAntSpawner(float xx, float yy)
 {
 	spawnX = xx;
-	spawnY = xx;
+	spawnY = yy;
 
 
 	lastAntSpawnTime = 0.f;

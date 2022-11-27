@@ -72,13 +72,9 @@ void AntScene::functionnalAntCode()
     antSpawner = new AntSpawner(200, 200);
     addChild(antSpawner, 2);
 
-    // Creating ants
-    //antVector.push_back(Antity::create() -> initAnt());
-    //antVector.push_back(Antity::create() -> initAnt());
-    //
-    //for (int i = 0; i < antVector.size(); i++)
-    // addChild(antVector[0], 0);
-
+    // Finish
+    antFinish = new AntFinish(500, 0);
+    addChild(antFinish, 2);
 
     initPhysics();
 }
@@ -129,6 +125,9 @@ void AntScene::update(float dt)
 
     // Spawner
     antSpawner -> updateSpawner(dt, this);
+
+    // Finish
+    antFinish -> updateFinish(dt, this);
 
     // Game over condition
     if(gameOver())

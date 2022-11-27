@@ -17,7 +17,7 @@ class Antity : public cocos2d::Sprite
 		float antY;
 		float antSpeedX;
 		float antSpeedY;
-		float antDefaultSpeed = 300.f;
+		float antDefaultSpeed = 100.f;
 		OOBLimits currentXoob = OOBLimits::NONE;
 		OOBLimits currentYoob = OOBLimits::NONE;
 
@@ -25,6 +25,11 @@ class Antity : public cocos2d::Sprite
 
 		string pathToAntTexture = "../Resources/images/";
 
+		// Animation
+		// cocos2d::Sprite* antSprite;
+		cocos2d::Vector<cocos2d::SpriteFrame*> antAnimFrames;
+		cocos2d::Animation* antAnimation;
+		cocos2d::Animate* antAnimate;
 		
 	public :
 
@@ -34,11 +39,14 @@ class Antity : public cocos2d::Sprite
 		Antity* initAnt(float xx = 70, float yy = 300);
 		void initAntSub(float xx = 70, float yy = 300);
 
-		// "::create()" function
-		CREATE_FUNC(Antity);
+		// Animation
+		void runAntAnimation();
 
 		void outOfBoundsCheckX();
 		void outOfBoundsCheckY();
 
 		void update(float dt) override;
+
+		// "::create()" function
+		CREATE_FUNC(Antity);
 };
