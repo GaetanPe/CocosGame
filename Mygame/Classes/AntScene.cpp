@@ -76,7 +76,7 @@ void AntScene::functionnalAntCode()
     antFinish = new AntFinish(500, 0);
     addChild(antFinish, 2);
 
-    initPhysics();
+    //initPhysics();
 }
 
 
@@ -101,7 +101,7 @@ void AntScene::setPhysicsBody(cocos2d::Sprite* sprite)
 
 bool AntScene::onCollision(PhysicsContact& contact)
 {
-    return true;
+    return false;
 }
 
 
